@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>singal Article</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header class="bg-blue pading-1rem font-15">
+      <div class="container flex justify-between ">
+       <div>
+        <a href="/" class="color-white text-shadow">Home</a>
+      </div>
+      <nav>
+        <a href="/users">
+          <button class ="btn">B a c k</button>
+        </a>
+      </nav>
+      </div>
+    </header>
+    <main class="bg-green height">
+     <section class="container flex justify-center align-item">
+        
+        <div class="width line-height word-rap">
+       <h1 class="text-captilize text-shadow"><strong class="font-15 color-white">Title :</strong><%=author.title%></h1>
+    <h1 class="text-captilize text-shadow"><strong class="font-15 color-white">Author :</strong> <%=author.author%></h1>
+   <h3 class="text-captilize text-shadow"> <strong class="font-15 color-white">Tags :</strong> <%=author.tags%></h3>
+  <p class="text-captilize text-shadow"><strong class="font-15 color-white">Description :</strong> <%=author.description%></p>
+
+        <div class="flex pading-1rem">
+          <a href="/users/<%=author.id%>/edit"><button class="btn margin-left ">E d i t</button></a>
+        <a href="/users/<%=author.id%>/delete"><button class="btn margin-left">D e l e t e</button></a>
+           <a href="/users/<%=author.id%>/likes"><button class="btn margin-left">Like👍🏽</button></a>
+        <h3 class="color-pink margin-left font-15"><%=author.likes%></h3>
+         <a href="/users/<%=author.id%>/dislike"><button class="btn margin-left">D i s l i k e</button></a>
+          </div>
+        </div>
+        
+        
+     </section>
+    </main>
+  </body>
+</html>

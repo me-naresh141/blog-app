@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> edit form</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header class="bg-blue pading-1rem font-15">
+      <div class="container flex justify-between ">
+       <div>
+        <a href="/" class="color-white text-shadow">Home</a>
+      </div>
+      <nav>
+        <a href="/users/<%=author._id%>">
+          <button class ="btn">B a c k</button>
+        </a>
+      </nav>
+      </div>
+    </header>
+    
+    <main class="bg-green ">
+       <section class="container height flex justify-center align-item">
+        <div class="form-div pading-1rem">
+ <form action="/users/<%=author.id%>" method="post" class="flex-colum flex">
+    <h1 class="text-center text-shadow">Edit Article</h1>
+                <input type="text" name="title" id="" placeholder="Add Title" value="<%=author.title%>" required> 
+                 <textarea name="description" id="" cols="6" rows="3" placeholder=" Add Description" required><%=author.description%></textarea>
+                  <input type="text" name="tags" id="" placeholder="Tags" value="<%=author.tags%>" required>
+                  <input type="text" name="author" id="" placeholder="Author" value="<%=author.author%>" required  >
+                  <button type="submit" class="btn ">Submit</button>
+
+            </form>
+        </div>
+         
+       </section>
+           
+        
+    </main>
+  </body>
+</html>

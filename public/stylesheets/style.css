@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  width: 1600%;
+  max-width: 90%;
+  /* border: 2px solid; */
+  margin: 0 auto;
+}
+
+/* background color */
+.bg-green {
+  background-color: rgb(43, 44, 82);
+}
+.bg-blue {
+  background-color: rgb(25, 25, 50);
+}
+.bg-red {
+  background-color: red;
+}
+/* color */
+.color-white {
+  color: white;
+}
+.color-pink {
+  color: rgb(20, 200, 38);
+}
+
+.word-rap {
+  word-wrap: break-word;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.text-captilize {
+  text-transform: capitalize;
+}
+/* margin pading */
+.pading-1rem {
+  padding: 1rem;
+}
+
+.margin-tb {
+  margin: 2rem 0;
+}
+.margin {
+  margin: 2rem auto;
+}
+.margin-left {
+  margin-left: 1rem;
+}
+
+.height {
+  height: 100vh;
+  overflow-y: scroll;
+}
+.line-height {
+  line-height: 2;
+}
+.width {
+  width: 90%;
+}
+.border-black {
+  border: 2px solid;
+}
+.overflow-hidden {
+  overflow-y: hidden;
+}
+.btn {
+  font-size: 1.3rem;
+  padding: 0.3rem;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px 1px gray;
+  background-color: rgb(43, 44, 82);
+  color: aliceblue;
+  text-shadow: 2px 2px 2px rgb(101, 99, 99);
+  /* width: 130px; */
+  /* margin: 0 auto; */
+}
+.btn:active {
+  position: relative;
+  bottom: -1px;
+  box-shadow: 0px 2px 2px 2px gray;
+}
+
+.text-shadow {
+  text-shadow: 2px 1px 2px rgba(222, 217, 217, 0.321);
+}
+/* font size */
+.font-15 {
+  font-size: 1.5rem;
+}
+
+.font-2 {
+  font-size: 3rem;
+}
+/* flex */
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.flex-colum {
+  flex-direction: column;
+}
+.flex-row {
+  flex-direction: row;
+}
+.align-item {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.form-div {
+  width: 30%;
+  border: 2px solid rgb(25, 25, 50);
+}
+
+input,
+textarea {
+  margin: 1rem 0;
+  padding: 0.7rem;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
