@@ -55,6 +55,9 @@ a {
 .margin-left {
   margin-left: 1rem;
 }
+.resize {
+  resize: vertical;
+}
 
 .height {
   height: 100vh;
