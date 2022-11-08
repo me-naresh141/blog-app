@@ -8,7 +8,6 @@
 .container {
   width: 1600%;
   max-width: 90%;
-  /* border: 2px solid; */
   margin: 0 auto;
 }
 
@@ -22,6 +21,12 @@
 .bg-red {
   background-color: red;
 }
+.bg-transparent {
+  background: transparent;
+}
+.border-bottom {
+  border-bottom: 2px solid rgb(79, 78, 78);
+}
 /* color */
 .color-white {
   color: white;
@@ -30,6 +35,9 @@
   color: rgb(20, 200, 38);
 }
 
+.color-gray {
+  color: rgb(156, 156, 224);
+}
 .word-rap {
   word-wrap: break-word;
 }
@@ -45,7 +53,9 @@ a {
 .pading-1rem {
   padding: 1rem;
 }
-
+.pading-5rem {
+  padding: 0.5rem;
+}
 .margin-tb {
   margin: 2rem 0;
 }
@@ -55,25 +65,53 @@ a {
 .margin-left {
   margin-left: 1rem;
 }
+.margin-right {
+  margin-right: 1rem;
+}
+.margin-top {
+  margin-top: 5rem;
+}
+.margin-bottom {
+  margin-bottom: 3rem;
+}
+.margin-bottom2 {
+  margin-bottom: 2rem;
+}
 .resize {
-  resize: vertical;
+  resize: none;
 }
 
 .height {
   height: 100vh;
   overflow-y: scroll;
 }
+
 .line-height {
-  line-height: 2;
+  line-height: 1.5;
 }
 .width {
   width: 90%;
+}
+.width-30 {
+  width: 30%;
+}
+.width-40 {
+  width: 40%;
+}
+.width-50 {
+  width: 50%;
+}
+.maxwidth-60 {
+  max-width: 60%;
 }
 .border-black {
   border: 2px solid;
 }
 .overflow-hidden {
   overflow-y: hidden;
+}
+.overflow-scroll-y {
+  overflow-y: scroll;
 }
 .btn {
   font-size: 1.3rem;
@@ -85,8 +123,6 @@ a {
   background-color: rgb(43, 44, 82);
   color: aliceblue;
   text-shadow: 2px 2px 2px rgb(101, 99, 99);
-  /* width: 130px; */
-  /* margin: 0 auto; */
 }
 .btn:active {
   position: relative;
@@ -97,9 +133,23 @@ a {
 .text-shadow {
   text-shadow: 2px 1px 2px rgba(222, 217, 217, 0.321);
 }
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.max-height10 {
+  max-height: 10rem;
+}
+
+.max-height14 {
+  max-height: 14rem;
+}
 /* font size */
 .font-15 {
   font-size: 1.5rem;
+}
+.font-13 {
+  font-size: 1.3rem;
 }
 
 .font-2 {
@@ -130,8 +180,8 @@ a {
 }
 
 .form-div {
-  width: 30%;
   border: 2px solid rgb(25, 25, 50);
+  max-width: 100%;
 }
 
 input,
@@ -143,10 +193,14 @@ textarea {
   border: none;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+header {
+  position: fixed;
+  display: inline-block;
+  width: 100%;
 }
 
-.container::-webkit-scrollbar {
-  display: none;
+.position-fixed {
+  position: fixed;
+  display: inline-block;
+  width: 100%;
 }

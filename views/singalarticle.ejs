@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>singal Article</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://kit.fontawesome.com/d08fba0fb1.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header class="bg-blue pading-1rem font-15">
+    <header class="bg-blue pading-1rem font-15 position-fixed">
       <div class="container flex justify-between ">
        <div>
         <a href="/" class="color-white text-shadow">Home</a>
@@ -17,22 +21,55 @@
       </nav>
       </div>
     </header>
-    <main class="bg-green height">
-     <section class="container flex justify-center align-item">
+    <main class="bg-green height scrollbar-none">
+     <section class="container flex justify-center align-item margin-top">
         
         <div class="width line-height word-rap">
        <h1 class="text-captilize text-shadow"><strong class="font-15 color-white">Title :</strong><%=author.title%></h1>
     <h1 class="text-captilize text-shadow"><strong class="font-15 color-white">Author :</strong> <%=author.author%></h1>
    <h3 class="text-captilize text-shadow"> <strong class="font-15 color-white">Tags :</strong> <%=author.tags%></h3>
-  <p class="text-captilize text-shadow"><strong class="font-15 color-white">Description :</strong> <%=author.description%></p>
+ <div class=" overflow-scroll-y  scrollbar-none max-height10 ">
+  <p class="text-captilize text-shadow color-gray font-13"><strong class="font-15 color-white">Description :</strong> <%=author.description%></p>
+  </div>
 
-        <div class="flex pading-1rem">
-          <a href="/users/<%=author.id%>/edit"><button class="btn margin-left ">E d i t</button></a>
-        <a href="/users/<%=author.id%>/delete"><button class="btn margin-left">D e l e t e</button></a>
-           <a href="/users/<%=author.id%>/likes"><button class="btn margin-left">Like👍🏽</button></a>
-        <h3 class="color-pink margin-left font-15"><%=author.likes%></h3>
-         <a href="/users/<%=author.id%>/dislike"><button class="btn margin-left">D i s l i k e</button></a>
+        <div class="flex pading-5rem {
+">
+        <a href="/users/<%=author.id%>/edit"><button class="btn">Edit</button></a>
+        <a href="/users/<%=author.id%>/delete"><button class="btn margin-left">Delete</button></a>
+           <a class="font-15 margin-left color-pink" href="/users/<%=author.id%>/likes"><i class="fa-solid fa-thumbs-up"></i></a>
+        <h3 class="color-pink margin-left margin-right font-15"><%=author.likes%></h3>
+         <a class="font-15 color-gray" href="/users/<%=author.id%>/dislike"><i class="fa-solid fa-thumbs-down"></i></a>
           </div>
+          <!-- comment form -->
+          <div class="width" >
+            <form action="/users/<%=author.id%>/comments" method="post" class="flex flex-colum">
+              <textarea class="resize" name="content" id="" cols="6" rows="1" placeholder="Write comments"></textarea>
+              <button type="submit" class="btn width-40 ">Add Comment</button>
+              </form>
+            </div>
+            <!-- all comments -->
+             <div class="margin-bottom2">
+              <h1 class="color-pink "><%=comment.length%> Commets</h1>
+            </div>
+
+          <div class="max-height14 overflow-scroll-y scrollbar-none">
+            <%comment.reverse().forEach((comment)=>{%>
+          <div>
+            <h1 class="text-shadow text-captilize"><%=comment.content%></h1>
+             <a class="font-15 margin-left color-pink" href="/comments/<%=comment.id%>/likes"><i class="fa-solid fa-thumbs-up"></i></a>
+            <small class="margin-left margin-right color-gray"><%=comment.likes%></small>
+
+            <a class="font-15 color-gray" href="/comments/<%=comment.id%>/dislike"><i class="fa-solid fa-thumbs-down"></i></a>
+
+            <a href="/comments/<%=comment.id%>/edit"><button class="btn">Edit</button></a>
+            <a href="/comments/<%=comment.id%>/delete/"><button class="btn margin-left">Delete</button></a>
+           
+          </div>
+
+          <%})%>
+          </div>
+          
+
         </div>
         
         

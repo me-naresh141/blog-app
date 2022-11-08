@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>update comment</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header class="bg-blue pading-1rem font-15 position-fixed">
+      <div class="container flex justify-between ">
+       <div>
+        <a href="/" class="color-white text-shadow">Home</a>
+      </div>
+      <nav>
+        <a href="/users/<%=comment.articleId%>">
+          <button class ="btn">B a c k</button>
+        </a>
+      </nav>
+      </div>
+    </header>
+   <main class="bg-green height scrollbar-none">
+    <section class="container flex justify-center align-item height scrollbar-none">
+        <div class="border-black text-center pading-1rem width">
+          <form action="/comments/<%=comment.id%>" method="post">
+            <h1 class="text-shadow font-2">Update Comment</h1>
+           <textarea class="width resize" name="content" id="" cols="30" rows="10" class="resize"><%=comment.content%></textarea>
+            <br>
+            <input type="submit"  class="btn">
+        </form>
+        </div>
+       
+    </section>
+   </main>
+  </body>
+</html>

@@ -3,6 +3,7 @@ var express = require('express')
 const article = require('../modals/article')
 var router = express.Router()
 let Article = require('../modals/article')
+let Comment = require('../modals/comment')
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
@@ -26,11 +27,22 @@ router.post('/', function (req, res, next) {
   })
 })
 
+// find a singal article
+// router.get('/:id', (req, res, next) => {
+//   let id = req.params.id
+//   Article.findById(id, (err, author) => {
+//     if (err) return next(err)
+//     res.render('singalarticle', { author: author })
+//   })
+// })
+
 router.get('/:id', (req, res, next) => {
   let id = req.params.id
   Article.findById(id, (err, author) => {
     if (err) return next(err)
-    res.render('singalarticle', { author: author })
+    Comment.find({ articleId: id }, (err, comment) => {
+      res.render('singalarticle', { author, comment })
+    })
   })
 })
 
@@ -82,6 +94,18 @@ router.get('/:id/dislike', (req, res, next) => {
         res.redirect('/users/' + id)
       })
     }
+  })
+})
+
+// write comment
+
+router.post('/:id/comments', (req, res, next) => {
+  let id = req.params.id
+  req.body.articleId = id
+  // console.log(req.body)
+  Comment.create(req.body, (err, comment) => {
+    console.log(comment)
+    res.redirect('/users/' + id)
   })
 })
 
